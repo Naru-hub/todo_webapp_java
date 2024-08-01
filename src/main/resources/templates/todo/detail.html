@@ -26,7 +26,7 @@
 			<td th:text="${todo.createdAt.format(
 				T(java.time.format.DateTimeFormatter).
 				ofPattern('yyyy/MM/dd HH:mm:ss'))}">
-				
+
 			</td>
 		</tr>
 		<tr>
@@ -37,6 +37,7 @@
 			</td>
 		</tr>
 	</table>
+	<a th:href="@{/todos/edit/{id}(id=${todo.id})}">編集</a>
 	<a th:href="@{/todos}">ToDo一覧へ</a>
 </body>
 
